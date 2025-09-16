@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>鍼（はり）メニュー - GOEI LABO</title>
+  <meta name="description" content="GOEI LABOの鍼メニュー。鍼（マッサージも含みます）、美容鍼、ていしん（刺さない鍼）の施術内容と料金をご案内します。">
+  <meta name="theme-color" content="#D4A574">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #faf9f7; 
+      --fg: #2d2825; 
+      --muted: #6b6562; 
+      --gold: #D4A574; 
+      --warm: #E8C4A0;
+      --card: #ffffff; 
+      --line: #e6e1db;
+      --accent: #B8956A;
+      --space: clamp(16px, 2vw, 24px);
+      --shadow: 0 4px 20px rgba(180, 149, 106, 0.08);
+    }
+    body{margin:0;font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--fg);line-height:1.8}
+    a{color:var(--fg);text-decoration:none;transition:0.3s}
+    a:hover{color:var(--gold)}
+    img{max-width:100%;border-radius:12px}
+
+    header.nav{
+      position:sticky;top:0;z-index:50;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px var(--space);
+      background:rgba(250,249,247,0.95);
+      border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    header.nav img.logo{height:48px}
+    .back-btn{background:var(--gold);color:#fff;padding:8px 16px;border-radius:20px;font-size:0.9rem;}
+    .back-btn:hover{background:var(--accent)}
+
+    .hero{background:linear-gradient(135deg,var(--warm),var(--gold));color:white;text-align:center;padding:4rem var(--space)}
+    .hero h1{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,48px);margin:0 0 1rem}
+
+    main.section{max-width:1200px;margin:0 auto;padding:80px var(--space)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3vw,32px);box-shadow:var(--shadow);margin-bottom:2rem}
+    .card h3{color:var(--gold);margin-top:0}
+
+    .price-list{margin-top:1rem}
+    .price-list table{width:100%;border-collapse:collapse;margin-top:.5rem}
+    .price-list th,.price-list td{padding:8px;border-bottom:1px solid var(--line);text-align:left}
+    .price-list th{color:var(--gold)}
+
+    .contact-card{background:linear-gradient(135deg,var(--gold),var(--accent));color:white;text-align:center;border-radius:20px;padding:2rem;margin:3rem 0}
+    .contact-card a.phone{font-size:1.8rem;font-weight:700;display:block;margin:1rem 0;color:white}
+    .btn{display:inline-block;background:white;color:var(--gold);padding:.8rem 1.5rem;border-radius:25px;font-weight:600;margin-top:1rem}
+    .btn:hover{background:var(--warm);color:white}
+
+    footer.footer{border-top:1px solid var(--line);padding:40px var(--space);text-align:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="https://goeilabo-oss.github.io/web/"><img src="goeilogo.jpeg" alt="GOEI LABO" class="logo"></a>
+    <a href="https://goeilabo-oss.github.io/web/" class="back-btn">← 戻る</a>
+
+
+  </header>
+
+  <section class="hero">
+    <h1>鍼（マッサージも含みます）</h1>
+    <p>肩コリや腰痛・頭痛・自律神経失調症まで辛いお身体の症状に合わせて施術します。マッサージでは届かない深い筋肉への鍼のアプローチなど、マッサージとは違う効果が期待できます。</p>
+  </section>
+
+  <main class="section">
+
+    <div class="card">
+      <h3>鍼（マッサージも含みます）</h3>
+      <p>肩コリや腰痛・頭痛・自律神経失調症まで辛いお身体の症状に合わせて施術します。特にマッサージでは届かないような深い筋肉への鍼のアプローチや、電気バルスを使い筋肉を緩ませ痛みを取る鍼、つぼを使い自律神経を整える鍼などは、マッサージとは違う効果が期待できます。ご希望により鍼のみでも、マッサージとの組み合わせでも、お話を伺いながら施術内容は決めて頂けます。</p>
+
+      <p>鍼が初めての方も、鍼に慣れていて鍼の響きが好きな方も対応いたします。特に痛い鍼が苦手な方や、初めての鍼がこわい方、女性で肌を出すのに抵抗がある方は安心して施術を受けて頂けると思いますので、是非ご相談ください。なんとなく身体の調子が悪い、疲れが取れにくいなどの症状でお悩みの方も、一度鍼を試してみてはいかがでしょうか。</p>
+
+      <div class="price-list">
+        <table>
+          <tr><th>15分 (オプションメニュー)</th><td>¥2,000</td></tr>
+          <tr><th>30分</th><td>¥5,000</td></tr>
+          <tr><th>45分</th><td>¥6,500</td></tr>
+          <tr><th>60分</th><td>¥8,000</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>美容鍼（顔）</h3>
+      <p>顔や頭に鍼をする事で筋肉を柔らかくし、血行が良くなる事でシワやたるみが改善されます。デコルテから首・顔・頭をしっかりマッサージで揉みほぐした後、顔専用の極細い鍼にて施術します。顔の気になる場所には多めに行い、頭皮の鍼にはご希望で電気パルスで微弱電流を流す事も可能です。</p>
+
+      <p>鍼を入れている間に手足のマッサージをし、お腹には赤外線をあて、身体の内側を温めて全身的にも血の巡りを良くします。最後にカッサでフェイスラインを整え、顔に炭酸ミストをふり仕上げます。</p>
+
+      <p>施術内容充実のおすすめメニューです。</p>
+
+      <div class="price-list">
+        <table>
+          <tr><th>45分</th><td>¥6,500</td></tr>
+          <tr><th>60分</th><td>¥8,000</td></tr>
+        </table>
+        <p class="note">＊60分コースでは、顔に鍼を入れている時間が長くなります。鍼は長い時間入れたほうがより効果的です。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>ていしん（刺さない鍼）</h3>
+      <p>刺さない鍼『ていしん』を使って全身をさすり、気血の巡りを良くさせて自律神経を整えます。酷い疲れや病後等で心身の神経が過敏になっていたり、通常より体力が落ちマッサージの刺激すら辛いと感じるときに行うと、より効果的です。</p>
+      <div class="price-list">
+        <table>
+          <tr><th>15分</th><td>¥2,000</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h2>📞 ご予約・お問い合わせ</h2>
+      <p>お気軽にお電話ください。施術中は出られない場合があります。</p>
+      <a href="tel:090-9960-5080" class="phone">090-9960-5080</a>
+      <a href="tel:090-9960-5080" class="btn">今すぐ電話する</a>
+    </div>
+
+    <div class="card">
+      <h3>営業案内</h3>
+      <p><strong>住所：</strong>東京都港区白金2-1-4【豪栄整復院　白金院内】</p>
+      <p><strong>営業時間：</strong>10:00-19:00</p>
+      <p><strong>定休日：</strong>水曜・日曜定休</p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> GOEI LABO - 東京都港区白金 | 女性鍼灸師による鍼・リラクゼーションサロン</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
