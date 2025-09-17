@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOEI LABO｜東京都港区白金｜女性鍼灸あんまマッサージ指圧師による鍼・リラクゼーションサロン</title>
+  <meta name="description" content="東京都港区白金のGOEI LABO（ゴエイラボ）。女性鍼灸あんマッサージ指圧師による鍼・リラクゼーションマッサージサロン。全身マッサージ・美容鍼・耳つぼマッサージ・ヘッドマッサージ・フットオイルマッサージなど多彩なメニュー。白金高輪駅・白金台駅徒歩圏内。完全予約制でお客様一人一人にあったオーダーメイドの施術をご提供。">
+  <meta name="keywords" content="GOEI LABO,ゴエイラボ,鍼灸,あんまマッサージ,指圧,美容鍼,リラクゼーション,白金,港区,女性鍼灸師,耳つぼマッサージ,ヘッドマッサージ,フットマッサージ,白金高輪駅,白金台駅">
+  <link rel="canonical" href="http://goei5081.com/GOEILABO/">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#D4A574">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #faf9f7; 
+      --fg: #2d2825; 
+      --muted: #6b6562; 
+      --gold: #D4A574; 
+      --warm: #E8C4A0;
+      --card: #ffffff; 
+      --line: #e6e1db;
+      --accent: #B8956A;
+      --space: clamp(16px, 2vw, 24px);
+      --shadow: 0 4px 20px rgba(180, 149, 106, 0.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      color:var(--fg);
+      background:var(--bg);
+      line-height:1.75;
+    }
+    img{max-width:100%;height:auto;vertical-align:middle}
+    a{color:var(--fg);text-decoration:none;transition:color 0.3s ease}
+    a:hover{color:var(--gold)}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px var(--space);
+      background:rgba(250, 249, 247, 0.98);
+      backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    /* 左上ロゴを大きめに調整（PCはやや大きく、スマホはやや抑える） */
+    .logo{
+      height:56px; /* デスクトップ基準の高さ */
+      width:auto;
+      transition:opacity 0.3s ease;
+      display:block;
+    }
+    .logo:hover{opacity:0.9}
+
+    .menu{
+      appearance:none;
+      border:1px solid var(--line);
+      background:var(--card);
+      color:var(--fg);
+      border-radius:12px;
+      padding:8px 12px;
+      transition:all 0.3s ease;
+      box-shadow:var(--shadow);
+    }
+    .menu:hover{background:var(--warm);border-color:var(--gold)}
+    .links{display:none}
+    .links.open{
+      display:grid;
+      position:absolute;
+      top:64px;
+      left:0;
+      right:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      padding:8px var(--space);
+      box-shadow:var(--shadow);
+    }
+    .links a{padding:12px var(--space);border-radius:10px;transition:background 0.3s ease}
+    .links a:hover{background:var(--warm)}
+
+    .nav:hover .links.open {
+      display: grid;
+    }
+    .nav:not(:hover) .links {
+      display: none;
+    }
+
+    .hero{position:relative;display:grid;min-height:75vh;overflow:hidden}
+    .hero-media{position:absolute;inset:0;overflow:hidden}
+    .hero-photo{
+      width:100%;height:100%;object-fit:cover;
+      filter:brightness(.9) contrast(1.05) sepia(.1) saturate(1.1);
+    }
+    .hero-deco{position:absolute;inset:auto 0 0 0;opacity:.4}
+    .hero-copy{
+      position:relative;
+      z-index:1;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:12vh var(--space);
+      background:linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(232, 196, 160, 0.15));
+    }
+    .display{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(32px,5vw,56px);
+      letter-spacing:.02em;
+      margin:.2em 0;
+      color:var(--fg);
+      text-shadow:0 2px 8px rgba(180, 149, 106, 0.2);
+    }
+    .hero-subtitle{
+      font-size:clamp(18px,3vw,24px);
+      font-weight:700;
+      color:#ffffff;
+      background:linear-gradient(135deg, var(--gold), var(--accent));
+      padding:16px 32px;
+      border-radius:30px;
+      border:3px solid var(--gold);
+      margin-top:1rem;
+      box-shadow:0 8px 32px rgba(180, 149, 106, 0.3);
+      text-shadow:0 1px 3px rgba(0,0,0,0.3);
+    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:2rem}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5em;
+      padding:1em 1.5em;
+      border-radius:25px;
+      border:2px solid var(--gold);
+      transition:all 0.3s ease;
+      font-weight:500;
+      min-height:48px;
+      box-shadow:var(--shadow);
+    }
+    .btn.primary{background:var(--gold);color:white;font-weight:600}
+    .btn.primary:hover{background:var(--accent);transform:translateY(-2px)}
+    .btn.ghost{background:rgba(255,255,255,0.9);color:var(--fg)}
+    .btn.ghost:hover{background:var(--warm);transform:translateY(-2px)}
+
+    .section{padding:80px var(--space)}
+    .center{text-align:center}
+    .grid{display:grid;gap:var(--space)}
+    .two{grid-template-columns:1fr}
+    .three{grid-template-columns:1fr}
+    @media (min-width:768px){
+      .two{grid-template-columns:1fr 1fr}
+      .three{grid-template-columns:repeat(3,1fr)}
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:clamp(20px,3vw,32px);
+      box-shadow:var(--shadow);
+      transition:all 0.3s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 32px rgba(180, 149, 106, 0.15);
+    }
+
+    .price{
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .price::before{
+      content:'';
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background-size:cover;
+      background-position:center;
+      filter: blur(5px) brightness(0.9);
+      transform: scale(1.1);
+      z-index:0;
+    }
+    .price.massage::before{
+      background-image:url('mg.jpg');
+    }
+    .price.acupuncture::before{
+      background-image:url('pr.jpg');
+    }
+    .price.ear-acupressure::before{
+      background-image:url('mimi.jpg');
+    }
+    .price > *{
+      position:relative;
+      z-index:1;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .price h3 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      color: #fff;
+    }
+    .price p {
+      color: #fff;
+    }
+    .price .yen{font-size:1.1rem;color:white;margin:1rem 0}
+    .price .yen span{font-size:2.5rem;color:white;font-weight:700;display:block}
+    .note{color:var(--muted);font-size:.95rem}
+    .price .btn {
+      color: var(--fg);
+      background: rgba(255,255,255,0.9);
+      border-color: rgba(255,255,255,0.9);
+      box-shadow: none;
+    }
+    .price .btn:hover {
+      background: #fff;
+    }
+    
+    .footer{
+      border-top:1px solid var(--line);
+      padding:40px var(--space);
+      text-align:center;
+      color:var(--muted);
+      background:var(--card);
+    }
+    .map iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}
+
+    /* アニメーション */
+    .reveal{
+      opacity:0;
+      transform:translateY(20px);
+      animation:show 0.8s ease forwards;
+      view-timeline-name:--rev;
+      animation-timeline:--rev;
+      animation-range:entry 10% cover 40%;
+    }
+    @keyframes show{
+      to{opacity:1;transform:none}
+    }
+
+    /* レスポンシブ調整 */
+    @media (max-width:767px){
+      .hero-copy{padding:8vh var(--space)}
+      .section{padding:60px var(--space)}
+      .hero-subtitle{
+        font-size:16px;
+        padding:12px 20px;
+        margin-top:1rem;
+      }
+      .display{
+        font-size:clamp(28px,8vw,40px);
+      }
+      .balanced-grid .media.card, 
+      .balanced-grid .text.card {
+        min-height: auto;
+      }
+      .cta{
+        flex-direction:column;
+        align-items:center;
+      }
+      .btn{
+        width:100%;
+        max-width:280px;
+      }
+      /* スマホではロゴを少し小さく */
+      .logo{
+        height:48px;
+      }
+    }
+
+    .location-info {
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .location-info h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .balanced-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space);
+      align-items: stretch;
+    }
+    @media (min-width:768px){
+      .balanced-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .balanced-grid .media.card {
+      display: flex;
+      align-items: center;
+      min-height: 300px;
+    }
+    .balanced-grid .text.card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" role="banner">
+    <a class="brand" href="#top" aria-label="GOEI LABO ホーム">
+      <!-- 左上ロゴを大きく表示 -->
+      <img class="logo" src="goeilogo.jpeg" alt="GOEI LABO">
+    </a>
+    <button class="menu" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="navlinks">MENU</button>
+    <nav id="navlinks" class="links" role="navigation">
+      <a href="#concept">サロン紹介</a>
+      <a href="#menu">メニュー</a>
+      <a href="#reserve">予約</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="ヒーロー">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-photo" src="top.jpg" alt="GOEI LABOサロン外観" loading="lazy">
+      </div>
+      <div class="hero-copy">
+        <h1 class="display">Relaxation salon</h1>
+        <div class="hero-subtitle">女性鍼灸あんまマッサージ指圧師による 鍼・リラクゼーションマッサージ</div>
+        <div class="cta">
+          <a href="#menu" class="btn ghost">メニューを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section id="concept" class="section reveal">
+      <div class="center">
+        <h2>女性鍼灸あんまマッサージ師による 鍼・リラクゼーションサロン</h2>
+        <p>日頃の疲れや、体の不調を抱えている方へ。<br>
+        全身マッサージ・ヘッドマッサージ・フットオイルマッサージ・鍼・美容鍼等の様々な施術メニューがございます。<br>
+        お客様一人一人にあったオーダーメイドの施術をご提供いたします。</p>
+      </div>
+      
+      <div class="balanced-grid">
+        <div class="media card">
+          <img src="mg.jpg" alt="施術風景" loading="lazy" width="1200" height="800">
+        </div>
+        <div class="text card">
+          <h3>GOEI LABOの特徴</h3>
+          <ul>
+            <li>女性鍼灸あんまマッサージ指圧師による安心の施術</li>
+            <li>お一人お一人に合わせたオーダーメイド施術</li>
+            <li>マッサージ・鍼治療・耳ツボマッサージなど多彩なメニュー</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section reveal" aria-labelledby="menu-title">
+      <h2 id="menu-title" class="center">メニュー・料金</h2>
+      <div class="grid three">
+        <article class="card price massage">
+          <h3>マッサージ</h3>
+          <p>日頃の体のメンテナンスとしての全身マッサージ</p>
+          <!-- 直接ファイルに遷移するリンクに変更 -->
+          <a class="btn primary" href="massage.html">詳しく見る</a>
+        </article>
+        <article class="card price acupuncture">
+          <h3>鍼治療</h3>
+          <p>「美容鍼」「鍼」目的にあった様々なメニューがございます。</p>
+          <a class="btn primary" href="goeihari.html">詳しく見る</a>
+        </article>
+        <article class="card price ear-acupressure">
+          <h3>耳ツボマッサージ</h3>
+          <p>マッサージで耳つぼを刺激する事でサポート。</p>
+          <!-- アップ済みファイル名に合わせて goeimimitubo.html へ -->
+          <a class="btn primary" href="goeimimitubo.html">詳しく見る</a>
+        </article>
+      </div>
+      <p class="note center">※詳しい料金・施術内容については、お電話にてお問い合わせください。</p>
+    </section>
+
+    <!-- RESERVE -->
+    <section id="reserve" class="section reveal">
+      <div class="card center">
+        <h2>ご予約・お問い合わせ</h2>
+        <p>ご予約・ご相談はお気軽にお電話にてご連絡ください。</p>
+        <div class="card">
+          <h3>📞 お電話でのご予約</h3>
+          <p><strong style="font-size: 1.5rem; color: var(--gold);">090-9960-5080</strong></p>
+          <p>※施術中はお電話に出られない場合がございます。</p>
+          <a class="btn primary" href="tel:090-9960-5080" aria-label="電話予約">今すぐ電話する</a>
+        </div>
+        <p class="note">※キャンセルの場合は事前にご連絡をお願いいたします。</p>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section id="access" class="section reveal">
+      <h2 class="center">アクセス・店舗情報</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>所在地</h3>
+          <p><strong>東京都港区白金2-1-4</strong><br>
+          【豪栄整復院　白金院内】※整復院の中の個室です。</p>
+          
+          <h3>営業時間</h3>
+          <p><strong>10:00〜19:00（祝日も営業）</strong></p>
+          
+          <h3>定休日</h3>
+          <p><strong>水曜・日曜定休</strong></p>
+          
+          <h3>最寄り駅</h3>
+          <p>白金高輪駅・白金台駅より徒歩圏内・白金氷川神社ならび</p>
+        </div>
+        <div class="map card">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.3550489809277!2d139.7310047!3d35.6436231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b07e92f10b7%3A0x57e1d10318441e6e!2z44CSMTA4LTAwNzIg5p2x5Lqs6YO95riv5Yy655m96YeR77yS5LiB55uu77yR4oiS77yUIOiXpOS6leODk-ODqw!5e0!3m2!1sja!2sjp!4v1758050618336!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> GOEI LABO - 東京都港区白金 | 女性鍼灸師による鍼・リラクゼーションサロン</small>
+  </footer>
+
+  <!-- JSON-LD構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "GOEI LABO",
+    "description": "東京都港区白金の女性鍼灸あんまマッサージ指圧師による鍼・リラクゼーションサロン",
+    "url": "http://goei5081.com/GOEILABO/",
+    "telephone": "090-9960-5080",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "白金2-1-4",
+      "addressLocality": "港区",
+      "addressRegion": "東京都",
+      "addressCountry": "JP"
+    },
+    "priceRange": "¥¥",
+    "openingHours": ["Mo 10:00-19:00", "Tu 10:00-19:00", "Th 10:00-19:00", "Fr 10:00-19:00", "Sa 10:00-19:00"],
+    "serviceType": ["鍼治療", "あんまマッサージ", "指圧", "美容鍼", "リラクゼーションマッサージ", "耳ツボマッサージ"]
+  }
+  </script>
+
+  <script defer>
+    // 年号更新
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // モバイルナビゲーション
+    const menuBtn = document.querySelector('.menu');
+    const navLinks = document.getElementById('navlinks');
+    const nav = document.querySelector('.nav');
+    
+    menuBtn?.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      navLinks.classList.toggle('open', !isExpanded);
+    });
+
+    // マウスがナビゲーションから離れたらメニューを閉じる
+    nav?.addEventListener('mouseleave', () => {
+      menuBtn.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('open');
+    });
+
+    // スムーズスクロール（内部リンク）
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        // 内部リンクだけ処理（外部ページリンクは通常の遷移）
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
